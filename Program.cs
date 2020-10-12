@@ -124,9 +124,9 @@ namespace ConsoleApp1
 
             Product[] prod = new Product[100];
             int index_p = 0;
+            bool loop = true;
 
-
-            while (true)
+            while (loop)
             {
                 Console.WriteLine("What product do you want? ");
                 int choice = 0;
@@ -146,6 +146,10 @@ namespace ConsoleApp1
 
                     case 3:
                         prod[index_p++] = new Table();
+                        break;
+
+                    case 4:
+                        loop = false;
                         break;
                 }
             }
